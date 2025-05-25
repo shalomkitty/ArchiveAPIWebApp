@@ -1,0 +1,103 @@
+﻿/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F0E7D8;
+    color: #334E58;
+}
+
+/* Container to center content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Main heading */
+h1 {
+    color: #69353F;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Section titles */
+section h2 {
+    color: #334E58;
+    margin-top: 40px;
+    border-left: 4px solid #AB9B96;
+    padding-left: 10px;
+}
+
+/* Forms */
+form {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+    form input[type="text"],
+    form select {
+        padding: 8px;
+        margin: 5px;
+        border: 1px solid #334E58;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        color: #334E58;
+    }
+
+    form input[type="submit"],
+    button {
+        background-color: #334E58;
+        color: #F0E7D8;
+        border: none;
+        padding: 8px 12px;
+        margin: 5px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        form input[type="submit"]:hover,
+        button:hover {
+            background-color: #69353F;
+        }
+
+/* Edit forms */
+#editFaculty,
+#editDepartment,
+#editMaterial {
+    background-color: #F0E7D8;
+    border: 1px solid #AB9B96;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #AB9B96;
+}
+
+th {
+    background-color: #69353F;
+    color: #F0E7D8;
+}
+
+tbody tr:hover {
+    background-color: #E1D7CE;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+    }
+}

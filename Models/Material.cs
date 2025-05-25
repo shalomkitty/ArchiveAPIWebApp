@@ -1,9 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ArchiveAPIWebApp.Models
 {
+
+
+    [Table("Material")]
     public class Material
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "This field can't be empty")]
@@ -27,8 +33,11 @@ namespace ArchiveAPIWebApp.Models
         public int DepartmentId { get; set; }
 
 
-        public virtual Faculty Faculty { get; set; }
-        public virtual Department Department { get; set; }
+        [ForeignKey(nameof(FacultyId))]
+        public virtual Faculty? Faculty { get; set; }
+
+        [ForeignKey(nameof(DepartmentId))]
+        public virtual Department? Department { get; set; }
 
         //public virtual ICollection<Faculty> Faculties { get; set; } = new List<Faculty>();
     }

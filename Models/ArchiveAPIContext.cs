@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace ArchiveAPIWebApp.Models
 {
@@ -15,7 +16,8 @@ namespace ArchiveAPIWebApp.Models
         public ArchiveAPIContext(DbContextOptions<ArchiveAPIContext> options)
             : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
+
         }
     }
 }
